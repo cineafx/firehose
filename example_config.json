@@ -1,0 +1,8 @@
+{
+  "discord": {
+    "id": "xxxxxxxxxxxxxxxxxx",
+    "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  "oauth": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "regex": "\\bexampe\\b"
+}
