@@ -6,8 +6,6 @@ const CancelToken = axios.CancelToken
 //CLASSES
 const DiscordLog = require('./DiscordLog')
 
-const nameRegex = /\bicdb\b/i
-
 module.exports = class Firehose {
   constructor (config) {
     this.config = config
@@ -64,8 +62,10 @@ module.exports = class Firehose {
             }
 
             if (obj.room) {
-              console.log(obj.room + " " + obj.nick + ": " + obj.body)
-              this.discordLog.twitchMessageFireHose(obj.room, obj.body, new Date().toISOString(), parsedtags.color, obj.nick, "")
+              if (!this.config.channelBlacklist.includes(obj.room.toLowerCase())) {
+                console.log(obj.room + " " + obj.nick + ": " + obj.body)
+                this.discordLog.twitchMessageFireHose(obj.room, obj.body, new Date().toISOString(), parsedtags.color, obj.nick, "")
+              }
             } else {
               DiscordLog.custom("firehose-notify",
                 response.toString().split("\n")[0].substring(7),

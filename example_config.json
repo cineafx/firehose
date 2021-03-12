@@ -4,5 +4,9 @@
     "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   },
   "oauth": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "regex": "\\bexampe\\b"
+  "regex": "\\bexampe\\b",
+  "channelBlacklist": [
+    "#xxxxxxxxxx",
+    "#yyyyyyyyyy"
+  ]
 }
